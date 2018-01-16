@@ -1,0 +1,81 @@
+JFDML JFormDesigner: "5.1.0.0.51" Java: "1.8.0_151" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "br.aplicacao.eletrica.view"
+	"i18n.bundleName": "Lista"
+	"i18n.keyPrefix": "br.aplicacao.eletrica.view.projeto.Projeto"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "default:grow"
+			"$rowSpecs": "fill:default, linegap, fill:default, linegap, fill:default, linegap, fill:default, linegap, fill:default"
+		} ) {
+			name: "this"
+			"visible": true
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+				"$columnSpecs": "default"
+				"$rowSpecs": "fill:default"
+			} ) {
+				name: "projetoPanel"
+				auxiliary() {
+					"JavaCodeGenerator.postInitCode": "projetoPanel = new ProjetoPanel(p);"
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 1
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+				"$columnSpecs": "default, labelcompgap, default"
+				"$rowSpecs": "default"
+			} ) {
+				name: "fontePanel"
+				auxiliary() {
+					"JavaCodeGenerator.postInitCode": "fontePanel = new FontePanel(p);"
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 3
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+				"$columnSpecs": "default, labelcompgap, default"
+				"$rowSpecs": "default"
+			} ) {
+				name: "quadroPanel"
+				auxiliary() {
+					"JavaCodeGenerator.postInitCode": "quadroPanel = new QuadroPanel(p);"
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 5
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+				"$columnSpecs": "default, labelcompgap, default"
+				"$rowSpecs": "default"
+			} ) {
+				name: "circuitoPanel"
+				auxiliary() {
+					"JavaCodeGenerator.postInitCode": "circuitoPanel = new CircuitoPanel(p);"
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 7
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+				"$columnSpecs": "default, labelcompgap, default"
+				"$rowSpecs": "default"
+			} ) {
+				name: "equipamentoPanel"
+				auxiliary() {
+					"JavaCodeGenerator.postInitCode": "equipamentoPanel = new EquipamentoPanel(p);"
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 9
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
