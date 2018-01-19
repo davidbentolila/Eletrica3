@@ -7,13 +7,8 @@ import java.util.List;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-import com.google.inject.Guice;
-import com.google.inject.Injector;
-import com.google.inject.persist.jpa.JpaPersistModule;
-
 import br.aplicacao.eletrica.dao.EntityManagerGuice;
 import br.aplicacao.eletrica.dao.ProjetoDAO;
-import br.aplicacao.eletrica.main.Main;
 import br.aplicacao.eletrica.modelo.projeto.Projeto;
 import br.aplicacao.eletrica.view.Detalhe;
 

@@ -6,21 +6,20 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-import br.aplicacao.eletrica.modelo.projeto.Projeto;
+import br.aplicacao.eletrica.modelo.projeto.Fonte;
 
-public class ProjetoDAO extends AbstractDAO<Projeto> {
+public class FonteDAO extends AbstractDAO<Fonte> {
 
-	public ProjetoDAO() {
-		super(Projeto.class);
+	public FonteDAO() {
+		super(Fonte.class);
 	}
 
-	public Projeto getByName(String nome) {
+	public Fonte getByName(String nome) {
 		CriteriaBuilder cb = getEntityManager().getCriteriaBuilder();
-		CriteriaQuery<Projeto> cq = cb.createQuery(Projeto.class);
-		Root<Projeto> projeto = cq.from(Projeto.class);
-		Predicate cond1 = cb.equal(projeto.get("nome"), nome);
+		CriteriaQuery<Fonte> cq = cb.createQuery(Fonte.class);
+		Root<Fonte> fonte = cq.from(Fonte.class);
+		Predicate cond1 = cb.equal(fonte.get("nome"), nome);
 		cq.where(cond1);
-
 		try {
 			return getEntityManager().createQuery(cq).getSingleResult();
 		} catch (NoResultException e) {

@@ -1,13 +1,11 @@
 package br.aplicacao.eletrica.modelo.projeto;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -22,12 +20,13 @@ public class Projeto implements Entidade<Projeto> {
 	private String descricao;
 	@Temporal(TemporalType.DATE)
 	private Calendar data;
+	private List<Fonte> fontes;
 
-	///@OneToMany
-//private List<Fonte> fontes;
+	/// @OneToMany
+	// private List<Fonte> fontes;
 
 	public Projeto() {
-		//fontes = new ArrayList<>();
+		// fontes = new ArrayList<>();
 	}
 
 	public Projeto(String nome, Calendar data, String autor, String descricao) {
@@ -42,6 +41,14 @@ public class Projeto implements Entidade<Projeto> {
 
 		this.nome = nome;
 
+	}
+
+	public List<Fonte> getFontes() {
+		return fontes;
+	}
+
+	public void setFontes(List<Fonte> fontes) {
+		this.fontes = fontes;
 	}
 
 	public String getNome() {
