@@ -1,26 +1,17 @@
 package br.aplicacao.eletrica.calculo;
 
+import br.aplicacao.eletrica.modelo.projeto.Projeto;
+
 public class CalculoPredial {
-	
+
 	private double demanda;
 	private double fd;
 	private double potenciaInstalada;
-	
-	
+	private Projeto projeto;
 
-	public CalculoPredial() {
+	public CalculoPredial(Projeto projeto) {
 		
-		
-	}
-	
-	public void demanda(ArrayList<double> pot) {
-		Demanda demanda = new Demanda();
-		for(double potencia: pot) {
-		demanda.add(potencia, potencia);
-		}
-		}
-	}
-	
-	
+		this.projeto = projeto;
 
+	}
 }
