@@ -53,3 +53,11 @@ O empenho em analisar a necessidade de renovação processual facilita a criaç�
    - Remover sem passar um *ID*
 5. Obter todos
    - Recuperar todos as pessoas
+
+
+
+\theta  = {n} log(n)
+
+```sh
+	gradle runAscending
+	```
